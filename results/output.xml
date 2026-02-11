@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.12 on win32)" generated="2026-02-10T16:49:22.412435" rpa="false" schemaversion="5">
+<suite id="s1" name="RBF" source="C:\DEV\RBF">
+<suite id="s1-s1" name="Resources" source="C:\DEV\RBF\resources">
+<suite id="s1-s1-s1" name="Tests" source="C:\DEV\RBF\resources\tests">
+<suite id="s1-s1-s1-s1" name="Login Test" source="C:\DEV\RBF\resources\tests\login_test.robot">
+<test id="s1-s1-s1-s1-t1" name="Connexion valide" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-02-10T16:49:22.667864" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-10T16:49:22.667502" elapsed="2.258729"/>
+</kw>
+<kw name="Connexion utilisateur" owner="login_page">
+<kw name="Ouvrir navigateur sur page login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-10T16:49:24.928501" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-10T16:49:24.928121" elapsed="0.970770"/>
+</kw>
+<status status="PASS" start="2026-02-10T16:49:24.927466" elapsed="0.971705"/>
+</kw>
+<kw name="Entrer username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-10T16:49:25.900396" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T16:49:25.899923" elapsed="0.092890"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-02-10T16:49:25.899410" elapsed="0.093594"/>
+</kw>
+<kw name="Entrer password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-10T16:49:25.994269" level="INFO">Typing text 'secret_sauce' into text field 'id:password'.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T16:49:25.993562" elapsed="0.061605"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-02-10T16:49:25.993196" elapsed="0.062204"/>
+</kw>
+<kw name="Cliquer login" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-10T16:49:26.056412" level="INFO">Clicking element 'id:login-button'.</msg>
+<arg>${LOGIN_BTN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-10T16:49:26.056062" elapsed="0.070343"/>
+</kw>
+<status status="PASS" start="2026-02-10T16:49:26.055649" elapsed="0.071025"/>
+</kw>
+<arg>${VALID_USER}</arg>
+<arg>${VALID_PASS}</arg>
+<status status="PASS" start="2026-02-10T16:49:24.926957" elapsed="1.200017"/>
+</kw>
+<kw name="Verifier page produits affichee" owner="product_page">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${PRODUCTS_TITLE}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2026-02-10T16:49:26.128133" elapsed="0.008845"/>
+</kw>
+<status status="PASS" start="2026-02-10T16:49:26.127619" elapsed="0.009547"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-10T16:49:26.137573" elapsed="2.104571"/>
+</kw>
+<tag>POEI2-638</tag>
+<status status="PASS" start="2026-02-10T16:49:22.664524" elapsed="5.578085"/>
+</test>
+<status status="PASS" start="2026-02-10T16:49:22.448750" elapsed="5.799022"/>
+</suite>
+<status status="PASS" start="2026-02-10T16:49:22.443446" elapsed="5.808590"/>
+</suite>
+<status status="PASS" start="2026-02-10T16:49:22.440590" elapsed="5.814950"/>
+</suite>
+<status status="PASS" start="2026-02-10T16:49:22.415846" elapsed="5.842549"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">POEI2-638</stat>
+</tag>
+<suite>
+<stat name="RBF" id="s1" pass="1" fail="0" skip="0">RBF</stat>
+<stat name="Resources" id="s1-s1" pass="1" fail="0" skip="0">RBF.Resources</stat>
+<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">RBF.Resources.Tests</stat>
+<stat name="Login Test" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">RBF.Resources.Tests.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
