@@ -42,7 +42,7 @@ pipeline {
             -H "Authorization: Bearer %XRAY_TOKEN%" ^
             -X POST ^
             --data-binary "@RBF\\results\\output.xml" ^
-            "https://xray.cloud.getxray.app/api/v2/import/execution/robot?testPlanKey=POEI2-974"
+            "https://xray.cloud.getxray.app/api/v2/import/execution/robot?projectKey=POEI2&testPlanKey=POEI2-974"
         """
     }
 }
