@@ -7,7 +7,7 @@ pipeline {
             steps {
                 bat '''
                 dir resources/tests
-                robot --output output.xml resources/tests/ || exit 0
+                robot --output RBF/results/output.xml resources/tests/ || exit 0
                 '''
             }
         }
