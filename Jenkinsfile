@@ -30,16 +30,22 @@ pipeline {
             }
         }
 
-        stage('Upload Results to Xray') {
-            steps {
-                bat '''
-                set /p TOKEN=<token.txt
-                cd RBF\\results
-                curl -H "Authorization: Bearer %TOKEN%" ^
-                     -F "file=@output.xml" ^
-                     https://xray.cloud.getxray.app/api/v2/import/execution/robot
-                '''
-            }
-        }
+      stage('Upload Results to Xray') {
+    steps {
+        bat """
+        REM Récupération du token
+        set /p XRAY_TOKEN=<token.txt
+
+        REM Upload du fichier XML Robot Framework vers Xray
+        curl ^
+            -H "Content-Type: text/xml" ^
+            -H "Authorization: Bearer %XRAY_TOKEN%" ^
+            -X POST ^
+            --data-binary "@RBF\\results\\output.xml" ^
+            "https://xray.cloud.getxray.app/api/v2/import/execution/robot?testPlanKey=POEI2-974"
+        """
+    }
+}
+
     }
 }
