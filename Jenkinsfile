@@ -35,7 +35,7 @@ pipeline {
                 bat '''
                 set /p TOKEN=<token.txt
                 curl -H "Authorization: Bearer %TOKEN%" ^
-                     -F "file=@results/output.xml" ^
+                     -F "file=@RBF\results\output.xml" ^
                      https://xray.cloud.getxray.app/api/v2/import/execution/robot
                 '''
             }
